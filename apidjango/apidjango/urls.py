@@ -18,7 +18,7 @@ from django.urls import path
 from django.urls.conf import include
 
 from sample.urls import router as sample_router
-from sample.views import SampleListApi,SampleCreateApi,SampleUpdateApi,SampleDestoryApi
+from sample.views import SampleListApi,SampleCreateApi, SampleRetrieveApi,SampleUpdateApi,SampleDestoryApi
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +27,5 @@ urlpatterns = [
     path('api/create/',SampleCreateApi.as_view(),name='list'),
     path('api/update/<str:pk>/',SampleUpdateApi.as_view(),name='list'),
     path('api/delete/<str:pk>/',SampleDestoryApi.as_view(),name='list'),
+    path('api/retrieve/<str:pk>/',SampleRetrieveApi.as_view(),name='list'),
 ]

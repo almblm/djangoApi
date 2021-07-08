@@ -29,3 +29,7 @@ class SampleUpdateApi(generics.UpdateAPIView):
 class SampleDestoryApi(generics.DestroyAPIView):
         queryset = SampleName.objects.all()
         serializer_class = SampleSerializer
+
+class SampleRetrieveApi(generics.RetrieveAPIView):
+        queryset = SampleName.objects.all()
+        serializer_class = SampleSerializer
